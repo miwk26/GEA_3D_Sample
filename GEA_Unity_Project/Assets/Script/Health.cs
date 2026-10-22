@@ -7,8 +7,13 @@ public class Health : MonoBehaviour
     public int currentHp;
     public Slider hpSlider;      // 플레이어만 연결
 
+    public GameObject hitEffect;   // HitEffect Prefab
 
-        public static int killCount; 
+    public GameObject dropPrefab;     // 적만 연결
+    public float dropChance = 0.3f;   // 30%
+
+
+    public static int killCount; 
     void Start()
     {
         currentHp = maxHp;
@@ -28,8 +33,20 @@ public class Health : MonoBehaviour
         Debug.Log(name + " HP: " + currentHp);
         UpdateBar();
 
+        // TakeDamage 의 UpdateBar(); 바로 아래에 추가
+        Vector3 hitPos = transform.position + Vector3.up;
+        if (hitEffect != null)
+            Instantiate(hitEffect, hitPos, Quaternion.identity);
+
+
         if (currentHp <= 0) Die();
         else Blink();
+
+    }
+    public void Heal(int amount)
+    {
+        currentHp = Mathf.Min(currentHp + amount, maxHp);
+        UpdateBar();
     }
 
 
@@ -50,6 +67,12 @@ public class Health : MonoBehaviour
         else
         {
             killCount++;
+            if (dropPrefab != null && Random.value < dropChance)
+            {
+                Vector3 pos = transform.position + Vector3.up * 0.5f;
+                Instantiate(dropPrefab, pos, Quaternion.identity);
+            }
+
             Destroy(gameObject);
         }
     }
