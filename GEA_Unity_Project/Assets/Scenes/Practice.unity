@@ -258,6 +258,9 @@ GameObject:
   - component: {fileID: 274970317}
   - component: {fileID: 274970319}
   - component: {fileID: 274970318}
+  - component: {fileID: 274970321}
+  - component: {fileID: 274970320}
+  - component: {fileID: 274970322}
   m_Layer: 0
   m_Name: Tester
   m_TagString: Untagged
@@ -287,7 +290,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274970315}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7753f02c8333e42438aafabddd99c7c7, type: 3}
   m_Name: 
@@ -324,13 +327,55 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274970315}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20a817777b8228145ae78fba93e5221f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HpPracttice
   currentHp: 7
   maxHp: 10
+--- !u!114 &274970320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274970315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cafd73c9aa696c43968a46cbff068ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamagePractice
+  attack: 10
+  defense: 5
+  isCritical: 1
+  targetIsBoss: 1
+--- !u!114 &274970321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274970315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb89fc5dd335974cae2745bdd026b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Lesson10
+--- !u!114 &274970322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274970315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a33710a3abd09419796a86a2d084a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSystem
+  expPerKill: 35000
+  killCount: 3
 --- !u!1 &961739749
 GameObject:
   m_ObjectHideFlags: 0
