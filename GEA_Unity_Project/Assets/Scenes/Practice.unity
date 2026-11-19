@@ -261,6 +261,8 @@ GameObject:
   - component: {fileID: 274970321}
   - component: {fileID: 274970320}
   - component: {fileID: 274970322}
+  - component: {fileID: 274970324}
+  - component: {fileID: 274970325}
   m_Layer: 0
   m_Name: Tester
   m_TagString: Untagged
@@ -376,6 +378,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelSystem
   expPerKill: 35000
   killCount: 3
+--- !u!114 &274970324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274970315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7fc515bc13cc204fb3276451873d462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BattleLog
+  damages: b0040000ac0d000020030000e02e0000ac0d0000b6030000
+  criticalLine: 3000
+--- !u!114 &274970325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274970315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7999ea97198929e4bb5fb0467a9b6bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BattleList
+  damages: b0040000ac0d000020030000e02e0000ac0d0000b6030000
+  criticalLine: 3000
 --- !u!1 &961739749
 GameObject:
   m_ObjectHideFlags: 0
